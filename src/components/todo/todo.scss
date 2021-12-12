@@ -1,0 +1,43 @@
+@import '~normalize.css';
+@import '~@blueprintjs/core/lib/css/blueprint.css';
+@import '~@blueprintjs/icons/lib/css/blueprint-icons.css';
+
+#heading{
+    font-size: 2em;
+    margin: 3rem 7rem;
+}
+.line-up {
+    display: flex;
+    justify-content: space-evenly;
+
+  .form1 {
+  width: 40%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 2rem 1rem;
+  padding: 1.5rem;
+  box-shadow: 4px 2px 20px 0px;
+  border-radius: 10%;
+
+    .deff {
+      margin: 0 0.5rem 0 1rem;
+      width: 80%;
+  }
+}
+  .result {
+    width: 40%;
+    height: -moz-fit-content;
+    height: fit-content;
+
+    border-radius: 3%;
+    .toDoListItem{
+        height: -moz-fit-content;
+        height: fit-content;
+        margin: 3rem 2rem;
+        padding: 1.5rem;
+        box-shadow: 4px 2px 20px 0px;
+        border-radius: 3%;
+    }
+}
+
+}
