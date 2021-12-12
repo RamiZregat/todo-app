@@ -14,9 +14,9 @@ function Header(props) {
         </Navbar.Group>
         <Navbar.Group align={Alignment.RIGHT}>
           <Navbar.Divider />
-          <Link to="/">
-            <Button className="bp3-minimal" icon="home" text="Home" />
-          </Link>
+          
+            <Button onClick={()=>location.href="https://ramizregat-todo-app.netlify.app/"} className="bp3-minimal" icon="home" text="Home" />
+          
           </Navbar.Group>
           </Navbar>
         </>

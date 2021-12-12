@@ -9,12 +9,12 @@ export default class App extends React.Component {
   render() {
     return (
       <Setting>
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
         <Header/>
-        <Route exact path="/">
+        {/* <Route exact path="/"> */}
       <ToDo />
-      </Route>
-      </BrowserRouter>
+      {/* </Route> */}
+      {/* </BrowserRouter> */}
       </Setting>
     );
   }
