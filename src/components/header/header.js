@@ -14,6 +14,12 @@ function Header(props) {
         </Navbar.Group>
         <Navbar.Group align={Alignment.RIGHT}>
           <Navbar.Divider />
+          <Link to="/setting">
+            <Button className="bp3-minimal" icon="cog" text="Setting" />
+          </Link>
+          </Navbar.Group>
+        <Navbar.Group align={Alignment.RIGHT}>
+          <Navbar.Divider />
           <Link to="/">
             <Button className="bp3-minimal" icon="home" text="Home" />
           </Link>

@@ -1,13 +1,12 @@
 import { useContext, useState } from 'react';
 import { ListContext } from '../components/setting/setting';
 const useForm = (callback) => {
-const {setShowResult}=useContext(ListContext)
   const [values, setValues] = useState({});
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
     callback(values);
-    setShowResult(true);
+
   };
 
   const handleChange = (event) => {

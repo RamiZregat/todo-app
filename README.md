@@ -6,7 +6,7 @@ This application was made to solve busy people time management complexities (obv
 
 ### Author : Rami Zregat
 
-## Phase 1 Version 1.0.0
+## Phase 1 
 
 ## Deploy, Run and Test
 
@@ -22,3 +22,21 @@ This application was made to solve busy people time management complexities (obv
 ### UML:
 
 ![uml](./img/Context-API.jpg)
+
+
+## Phase 2 
+
+## Deploy, Run and Test
+
+- [Pull Request](https://github.com/RamiZregat/todo-app/pull/9)
+- [Production](ramizregat-todo-app.netlify.app/)
+
+### Setup
+
+#### Running the app
+
+- `npm start`
+
+### UML:
+
+![uml](./res/Context-API.jpg)
