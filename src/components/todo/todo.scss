@@ -3,8 +3,11 @@
 @import '~@blueprintjs/icons/lib/css/blueprint-icons.css';
 
 #heading{
-    font-size: 2em;
-    margin: 3rem 7rem;
+  font-size: 1.8em;
+  margin: 3rem 7rem;
+  background-color: #2d3d4b;
+  color: white;
+  padding: 0.5rem 1rem;
 }
 .line-up {
     display: flex;
@@ -23,6 +26,9 @@
       margin: 0 0.5rem 0 1rem;
       width: 80%;
   }
+}
+.formToDoItems{
+  margin: 6% 0%;
 }
   .result {
     width: 40%;

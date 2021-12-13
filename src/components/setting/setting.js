@@ -6,16 +6,22 @@ import { v4 as uuid } from 'uuid';
   function Setting(props) {
     const [list, setList] = useState([]);
     const [incomplete, setIncomplete] = useState([]);
-    const [showResult,setShowResult]=useState(false)
-    const [postsPerPage,setPostsPerPage]=useState(3)
+    const [displayCompleted,setDisplayCompleted]=useState(true)
+    const [postsPerPage,setPostsPerPage]=useState(2)
     const [currentPage,setCurrentPage]=useState(1);
-
-
+    
+    
+    
     function addItem(item) {
-        console.log(item);
-        item.id = uuid();
-        item.complete = false;
-        setList([...list, item]);
+      console.log(item);
+      item.id = uuid();
+      item.complete = false;
+      setList([...list, item]);
+    }
+    function displayCompletedItems(){
+      setDisplayCompleted(displayCompleted===true?false:true)
+      localStorage.setItem('savedDisplayCompleted',displayCompleted)
+      
       }
     
       function deleteItem(id) {
@@ -35,6 +41,11 @@ import { v4 as uuid } from 'uuid';
         setList(items);
     
       }
+      useEffect(()=>{
+        let check=(localStorage.getItem("savedDisplayCompleted")==="true"?true:false)
+        setDisplayCompleted(check)
+        setPostsPerPage(parseInt(localStorage.getItem("savedPostsPerPage")))
+      },[])
     
       useEffect(() => {
         let incompleteCount = list.filter(item => !item.complete).length;
@@ -49,11 +60,13 @@ import { v4 as uuid } from 'uuid';
                 addItem,
                 deleteItem,
                 toggleComplete,
-                setShowResult,
-                showResult,
+                setDisplayCompleted,
+                displayCompleted,
                 postsPerPage,
                 currentPage,
-                setCurrentPage
+                setCurrentPage,
+                setPostsPerPage,
+                displayCompletedItems
             }}>
             {props.children}
          </ListContext.Provider>
